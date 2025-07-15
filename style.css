@@ -1,0 +1,260 @@
+/* Zera as margens e paddings padrão do navegador e define a fonte base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cor de fundo geral e cor do texto padrão */
+body {
+  background-color: #ffffff; /* Cinza claro */
+  color: #333; /* Cinza escuro */
+  line-height: 1.6;
+}
+
+/* Container central para limitar a largura e centralizar */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ---------- CABEÇALHO ---------- */
+.hero {
+  background-image: url("logo.png");
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  position: relative;
+  color: #e2e2e2;
+  
+  
+}
+
+
+/* Camada escura transparente para melhorar contraste do texto */
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Títulos no banner */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.hero .subinfo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/* ---------- SEÇÃO DE INFORMAÇÕES ---------- */
+.info {
+  background-color: #e2e2e2;
+  padding: 20px 20px 60px;
+  text-align: justify;
+}
+
+.info h2 {
+  color: #e67e22; /* Laranja forte */
+  margin-bottom: 20px;
+  font-size: 30px
+}
+
+/* ---------- SEÇÃO DE INFORMAÇÕES ANAIS ---------- */
+.anais.anais p {
+ 
+  margin-bottom: 0px;
+  font-size: 20px
+}
+
+/* ---------- SEÇÃO DE PROGRAMAÇÃO ---------- */
+.datas {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.datas h2 {
+  color: #6c757d;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.datas h3 {
+  color: #e67e22;
+  font-size: 2.5rem;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.grade-datas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+}
+
+.bloco-data img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px; /* ---------- BORDA REDONDA ---------- */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ---------- PATROCINADORES ---------- */
+.patrocinadores {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.patrocinadores h2 {
+  color: #e67e22;
+  margin-bottom: 30px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.logos img {
+  height: 120px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos img:hover {
+  filter: none;
+}
+
+/* ---------- BOTÕES ---------- */
+.botoes {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+
+.btn {
+  display: inline-block;
+  width: 120px;
+  margin: 8px;
+  
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #d35400; /* Laranja mais escuro */
+}
+
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* começa invisível */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+#btnTopo:hover {
+  background-color: #cf711c;
+}
+
+
+/* Botões maiores só na página Anais */
+body.anais .btn {
+  display: inline-block;
+  width: 150px;
+  margin: 5px;
+  
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+
+/* ---------- RODAPÉ ---------- */
+
+footer {
+  background-color: #4b4b4b;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f39c12; /* tom laranja */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+  }
+}
+header {
+  margin-bottom: 0;
+}
+
+section {
+  margin-top: 0;
+}

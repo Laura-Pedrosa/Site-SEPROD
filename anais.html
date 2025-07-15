@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anais | SEPROD</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="anais"> 
+
+
+    <header class="hero">
+        <div class="overlay">
+            <div class="container">
+
+            </div>
+        </div>
+    </header>
+
+    <section class="botoes">
+        <div class="container">
+            <a href="index.html" class="btn">Home</a>
+            <a href="#Normas" class="btn">Normas</a>
+            <a href="#Edicoes_anteriores" class="btn">Edições Anteriores</a>
+            <a href="#Contato" class="btn">Contato</a>
+        </div>
+        </div>
+    </section>
+
+    <section class="info" data-aos="fade-up">
+        <div class="container">
+            <h2 id="anais">Sobre os Anais</h2>
+            <p>Os Anais da Semana Acadêmica de Engenharia de Produção da Universidade Federal de Uberlândia – SEPROD UFU – tem como objetivo divulgar as produções científicas desenvolvidas pela comunidade acadêmica, pesquisadores, professores, estudantes e demais profissionais atuantes na Engenharia de Produção. </p>
+        </div>
+    </section>
+
+    <!-- AOS scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+ <!-- Rodapé simples -->
+  <footer>
+    <p>&copy; 2025 Semana da Engenharia - UFU. Todos os direitos reservados.</p>
+    <p>Contato: <a href="mailto:caepufupontal@gmail.com">caepufupontal@gmail.com</a> | Instagram:
+      <a href="https://www.instagram.com/seprod_ufu?utm_source=ig_web_button_share_sheet&igsh=MW9sZ2UwY3hrYXZtag=="
+        target="_blank">@seprod_ufu</a>
+    </p>
+  </footer>
+
+  <!-- Inicializa animações AOS -->
+  <script>
+    AOS.init();
+  </script>
+  <script>
+  // Mostrar/esconder botão ao rolar
+  const btnTopo = document.getElementById("btnTopo");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btnTopo.style.display = "block";
+    } else {
+      btnTopo.style.display = "none";
+    }
+  };
+
+  // Rolar suavemente para o topo
+  btnTopo.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+  <button id="btnTopo" title="Voltar ao topo">↑</button>
+
+</body>
+
+
+</html>
